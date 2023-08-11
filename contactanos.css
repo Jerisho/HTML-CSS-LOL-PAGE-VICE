@@ -1,0 +1,270 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    height:100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+a {
+    text-decoration: none;
+}
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.margin-interno{
+    padding: 0 50px;
+}
+
+.header{
+    background-image: url(/imagenes/Fondo\ banner.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+    .menu {
+        background: rgba(44, 43, 43, 0.7);
+        display: flex;
+        flex-flow: row nowrap;
+        height: 60px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+            .logo a {
+                color: white;
+                font-size: 30px;
+            }
+
+            .logo a:hover {
+                color: #7c6a6a;
+            }
+
+            .nav a {
+                color: white;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-right: 15px;
+            }
+
+            .nav i {
+                margin-right: 5px;
+            }
+
+            .nav a:hover{
+                color: #7c6a6a;
+            }
+        
+
+
+.contact_padre {
+    display: flex;
+    background: url(imagenes/Contacto/fondo.jpg);
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    flex-direction: column;
+    padding: 40px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    min-height: calc(100vh - 60px - 17px);
+    justify-content: center;
+}
+    .con_title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(imagenes/Contacto/fondo.jpg);
+        position: relative;
+    }
+
+        h1 {
+            font-family: "Poppins";
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 4px;
+        }
+
+    .contact{
+        background: rgba(44, 43, 43, 0.7);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        position: relative;
+        height: 100%;
+    }
+
+        .contact_input{
+            display: flex;
+            flex-direction: column;
+            flex: 5 1 auto;
+            width: 100%;
+        }
+
+            .contact_input input{
+                padding-left: 10px;
+            }
+
+            .contact_input textarea {
+                padding-left: 10px;
+                height: 100%;
+                resize: none;
+            }
+            .contain_but{
+                height: 35px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+                .contain_but button{
+                    width: 100%;
+                    height: 30px;
+                    color: white;
+                    background-color: rgb(99, 8, 52);;
+                    font-family: "Poppins";
+                    outline: none;
+                    margin: 0px 5px;
+                    border-radius: 3px;
+                    border: none;
+                }
+                
+                .contain_but > button:hover{
+                    background-color: rgb(77, 5, 40);;
+                }
+                .contain_but > button:active{
+                    padding-top: 2px;
+                    padding-left: 2px;
+                    background-color: rgb(48, 4, 25);;
+                }
+
+            .gen_input {
+                margin-bottom: 15px;
+                font-family: "Poppins";
+                width: 100%;
+                border: none;
+                border-top: solid 3px rgb(99, 8, 52);
+                background-color: rgba(182, 169, 169, 0.5);
+                outline: none;
+                font-size: 20px;
+                
+            }
+
+            .gen_input::placeholder {
+                font-family: "Poppins";
+                font-size: 20px;
+                color: white;
+                padding-left: 10px;
+            }
+
+            .gen_input:active {
+                border: none;
+            }
+
+            .gen_input:focus {
+                border: none;
+                font-size: 20px;
+                padding-top: 5px;
+            }
+
+        .contact_image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+            object-fit: contain;
+        }
+            .contact_image img{
+                width: 60%;
+                margin: auto;
+            }
+.footer{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+    .pie {
+        /*background: #A9333A;*/
+        /*width: 300px;*/
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .pie a {
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 2px;
+    }
+
+@media all and (max-width: 1000px){
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 600px){
+    .contact{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .con_title{
+        font-size: 12px;
+    }
+
+    .contact_input{
+        font-size: 12px;
+    }
+    .contact_input textarea{
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 400px){
+    .con_title{
+        font-size: 6px;
+    }
+    .gen_input::placeholder{
+        font-size: 15px;
+        padding: 0px;
+    }
+}
+
+@media all and (max-height: 750px){
+    
+    .padre {
+        min-height: none;
+        height: auto;
+    }
+    .nos_text img{
+        width: 200px;
+        float: right;
+    }
+}
